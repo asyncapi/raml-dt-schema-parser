@@ -4,7 +4,7 @@
   "description": "An AsyncAPI schema parser for RAML data types.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "mocha --recursive"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,11 @@
   "dependencies": {
     "js-yaml": "^3.13.1",
     "ramldt2jsonschema": "^1.1.0"
+  },
+  "devDependencies": {
+    "asyncapi-parser": "^0.14.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^7.1.0"
   }
 }
