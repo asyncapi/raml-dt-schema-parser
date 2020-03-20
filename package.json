@@ -4,7 +4,8 @@
   "description": "An AsyncAPI schema parser for RAML data types.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive"
+    "test": "mocha --recursive",
+    "release": "semantic-release"
   },
   "repository": {
     "type": "git",
