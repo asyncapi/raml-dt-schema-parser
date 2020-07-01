@@ -1,7 +1,12 @@
 const yaml = require('js-yaml');
 const r2j = require('ramldt2jsonschema');
 
-module.exports = async ({ message, defaultSchemaFormat }) => {
+module.exports = {
+  parse,
+  getMimeTypes
+}
+
+async function parse({ message, defaultSchemaFormat }) {
   try {
     let payload = message.payload;
     if (typeof payload === 'object') {
@@ -21,3 +26,10 @@ module.exports = async ({ message, defaultSchemaFormat }) => {
     console.error(e);
   }
 };
+
+function getMimeTypes() {
+  return [
+    'application/raml+yaml;version=1.0',
+  ]
+}
+

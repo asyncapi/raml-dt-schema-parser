@@ -36,9 +36,7 @@ channels:
                 anExample: Jack Johnson
 `
 
-parser.registerSchemaParser([
-  'application/raml+yaml;version=1.0',
-], ramlDtParser)
+parser.registerSchemaParser(ramlDtParser)
 
 await parser.parse(asyncapiWithRAML)
 ```
@@ -63,9 +61,7 @@ channels:
           $ref: 'yourserver.com/data-types/library.raml#/Book'
 `
 
-parser.registerSchemaParser([
-  'application/raml+yaml;version=1.0',
-], ramlDtParser)
+parser.registerSchemaParser(ramlDtParser)
 
 await parser.parse(asyncapiWithRAML)
 ```
