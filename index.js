@@ -4,14 +4,14 @@ const r2j = require('ramldt2jsonschema');
 module.exports = {
   parse,
   getMimeTypes
-}
+};
 
 async function parse({ message, defaultSchemaFormat }) {
   try {
     let payload = message.payload;
     if (typeof payload === 'object') {
-      payload = '#%RAML 1.0 Library\n' +
-        yaml.safeDump({ types: { tmpType: payload } });
+      payload = `#%RAML 1.0 Library\n${ 
+        yaml.safeDump({ types: { tmpType: payload } })}`;
     }
 
     // Draft 6 is compatible with 7.
@@ -30,6 +30,6 @@ async function parse({ message, defaultSchemaFormat }) {
 function getMimeTypes() {
   return [
     'application/raml+yaml;version=1.0',
-  ]
+  ];
 }
 
