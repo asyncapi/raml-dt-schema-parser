@@ -25,7 +25,7 @@ async function parse({ message, defaultSchemaFormat }) {
   } catch (e) {
     console.error(e);
   }
-};
+}
 
 function getMimeTypes() {
   return [
