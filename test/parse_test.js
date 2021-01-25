@@ -16,8 +16,6 @@ parser.registerSchemaParser(ramlDtParser);
 describe('parse()', function() {
   it('should parse RAML data types', async function() {
     const result = await parser.parse(inputWithRAML, { path: __filename });
-    console.log('lupa', JSON.stringify(result.json()));
-    console.log('dupa', outputWithRAML);
     await expect(JSON.stringify(result.json())).to.equal(outputWithRAML);
   });
 });
