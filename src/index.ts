@@ -9,13 +9,14 @@ const r2j = require('ramldt2jsonschema');
 import type { SchemaParser, ParseSchemaInput, ValidateSchemaInput, SchemaValidateResult } from '@asyncapi/parser';
 import type { v2 } from '@asyncapi/parser/esm/spec-types';
 
-export function RamlSchemaParser(): SchemaParser {
+export function RamlDTSchemaParser(): SchemaParser {
   return {
     validate,
     parse,
     getMimeTypes,
   };
 }
+export default RamlDTSchemaParser;
 
 async function validate(input: ValidateSchemaInput<unknown, unknown>): Promise<SchemaValidateResult[]> {
   const payload = formatPayload(input.data);
