@@ -6,8 +6,7 @@ const wap = lib.WebApiParser;
 const r2j = require('ramldt2jsonschema');
 /* eslint-enable */
 
-import type { SchemaParser, ParseSchemaInput, ValidateSchemaInput, SchemaValidateResult } from '@asyncapi/parser';
-import type { v2 } from '@asyncapi/parser/esm/spec-types';
+import type { SchemaParser, ParseSchemaInput, ValidateSchemaInput, SchemaValidateResult, SpecTypesV2 } from '@asyncapi/parser';
 
 export function RamlDTSchemaParser(): SchemaParser {
   return {
@@ -39,7 +38,7 @@ async function validate(input: ValidateSchemaInput<unknown, unknown>): Promise<S
   return validateResult;
 }
 
-async function parse(input: ParseSchemaInput<unknown, unknown>): Promise<v2.SchemaObject> {
+async function parse(input: ParseSchemaInput<unknown, unknown>): Promise<SpecTypesV2.SchemaObject> {
   const payload = formatPayload(input.data);
 
   // Draft 6 is compatible with 7.
