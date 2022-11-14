@@ -80,7 +80,11 @@
   },
   "release": {
     "branches": [
-      "master"
+      "master",
+      {
+        "name": "next-major",
+        "prerelease": true
+      }
     ],
     "plugins": [
       [
