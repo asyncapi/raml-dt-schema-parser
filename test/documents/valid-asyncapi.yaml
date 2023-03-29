@@ -1,23 +1,18 @@
-asyncapi: 2.0.0
+asyncapi: 2.4.0
 info:
-  title: Example using RAML data types
+  title: My API
   version: '1.0.0'
+
 channels:
-  mychannel:
+  myChannel:
     publish:
       message:
         $ref: '#/components/messages/testMessage'
-  otherchannel:
-    subscribe:
-      message:
-        schemaFormat: 'application/raml+yaml;version=1.0'
-        payload:
-          $ref: 'complex_cat.raml#/types/Cat'
 
 components:
   messages:
     testMessage:
-      schemaFormat: 'application/raml+yaml;version=1.0'
+      schemaFormat: application/raml+yaml;version=1.0
       payload:
         type: object
         properties:
