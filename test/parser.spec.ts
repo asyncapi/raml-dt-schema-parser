@@ -32,7 +32,7 @@ describe('parse()', function() {
 
   it('should parse valid AsyncAPI', async function() {
     const { document, diagnostics } = await coreParser.parse(inputWithValidAsyncAPI);
-    expect(filterDiagnostics(diagnostics, 'asyncapi-schemas-v2')).toHaveLength(0);
+    expect(filterDiagnostics(diagnostics, 'asyncapi2-schemas')).toHaveLength(0);
     doParseCoreTest((document?.json()?.channels?.myChannel?.publish?.message as any)?.payload, outputWithSimpleRAML);
     doParseCoreTest((document?.json()?.components?.messages?.testMessage as any)?.payload, outputWithSimpleRAML);
   });
@@ -77,13 +77,13 @@ describe('validate()', function() {
 
   it('should validate valid AsyncAPI', async function() {
     const diagnostics = await coreParser.validate(inputWithValidAsyncAPI);
-    expect(filterDiagnostics(diagnostics, 'asyncapi-schemas-v2')).toHaveLength(0);
+    expect(filterDiagnostics(diagnostics, 'asyncapi2-schemas')).toHaveLength(0);
   });
 
   it('should validate invalid AsyncAPI', async function() {
     const diagnostics = await coreParser.validate(inputWithInvalidAsyncAPI);
-    expect(filterDiagnostics(diagnostics, 'asyncapi-schemas-v2')).toHaveLength(2);
-    expectDiagnostics(diagnostics, 'asyncapi-schemas-v2', [
+    expect(filterDiagnostics(diagnostics, 'asyncapi2-schemas')).toHaveLength(2);
+    expectDiagnostics(diagnostics, 'asyncapi2-schemas', [
       // in channels
       {
         message: 'Property \'examples\' should be a map',
