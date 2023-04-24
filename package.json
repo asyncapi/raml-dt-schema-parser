@@ -36,9 +36,9 @@
   },
   "devDependencies": {
     "@asyncapi/parser": "^1.15.1",
-    "@semantic-release/commit-analyzer": "^8.0.1",
-    "@semantic-release/github": "^7.0.4",
-    "@semantic-release/npm": "^7.0.3",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/github": "^8.0.7",
+    "@semantic-release/npm": "^10.0.3",
     "@semantic-release/release-notes-generator": "^9.0.1",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
@@ -47,7 +47,7 @@
     "eslint-plugin-mocha": "^7.0.1",
     "eslint-plugin-sonarjs": "^0.5.0",
     "mocha": "^10.1.0",
-    "semantic-release": "^19.0.3"
+    "semantic-release": "^21.0.1"
   },
   "release": {
     "branches": [
