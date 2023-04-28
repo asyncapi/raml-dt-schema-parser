@@ -1,6 +1,6 @@
 {
   "name": "@asyncapi/raml-dt-schema-parser",
-  "version": "3.0.0-next-major.1",
+  "version": "3.0.0",
   "description": "An AsyncAPI schema parser for RAML data types.",
   "scripts": {
     "build": "npm run build:esm && npm run build:cjs",
