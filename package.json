@@ -35,7 +35,7 @@
     "ramldt2jsonschema": "^1.1.0"
   },
   "devDependencies": {
-    "@asyncapi/parser": "^1.15.1",
+    "@asyncapi/parser": "^2.0.0",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/github": "^8.0.7",
     "@semantic-release/npm": "^9.0.2",
